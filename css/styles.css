@@ -308,6 +308,9 @@ img{
 .skills__postgresql {
   width: 80%;
 }
+.skills__firebase {
+  width: 75%;
+}
 
 .skills__img{
   border-radius: .5rem;
