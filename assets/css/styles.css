@@ -346,7 +346,7 @@ img {
 }
 
 /* ===== CONTACT =====*/
-.contact__input {
+.contact__input, textarea {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
