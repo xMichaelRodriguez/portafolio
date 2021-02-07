@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const correoReg = /^[a-zA-Z0-9{3}+]+\S[a-zA-Z0-9]+\S@\S[a-zA-Z0-9_.-]+\.[a-zA-Z]+[^\s]$/;
     if (correoReg.test(email)) {
-      if (user & body) {
-        fetch("http://localhost:3000/contact/", {
+      if (user!=='' & body!=='') {
+        console.log('enviando')
+        fetch("https://contactosdf.herokuapp.com/contact/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
