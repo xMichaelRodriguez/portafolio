@@ -190,6 +190,7 @@ img {
 
 .text{
   padding: 10px;
+  text-align: justify;
 }
 /*===== HOME =====*/
 .home {
@@ -277,6 +278,10 @@ img {
   padding: 0.5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: 0.5rem;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+}
+.skills__img{
+  border-radius: 4px;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
 }
 

@@ -14,9 +14,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     };
 
     const correoReg = /^[a-zA-Z0-9{3}+]+\S[a-zA-Z0-9]+\S@\S[a-zA-Z0-9_.-]+\.[a-zA-Z]+[^\s]$/;
-    if (correoReg.test(email)) {
-      if (user!=='' & body!=='') {
-        console.log('enviando')
+    if (user !== "" && body !== "" && email !== "") {
+      if (correoReg.test(email)) {
+        console.log("enviando");
+        
         fetch("https://contactosdf.herokuapp.com/contact/", {
           method: "POST",
           headers: {
@@ -43,14 +44,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         Swal.fire({
           icon: "error",
           title: "Upss...",
-          text: "Rellana los campos faltantes",
+          text: "Correo invalido",
         });
       }
     } else {
       Swal.fire({
         icon: "error",
         title: "Upss...",
-        text: "Correo invalido",
+        text: "Rellana los campos",
       });
     }
   });
