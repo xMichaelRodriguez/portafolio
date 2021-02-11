@@ -188,6 +188,9 @@ img {
   right: 0;
 }
 
+.text{
+  padding: 10px;
+}
 /*===== HOME =====*/
 .home {
   height: calc(100vh - 3rem);
@@ -217,9 +220,10 @@ img {
   color: var(--first-color);
 }
 .home__img {
+  border-radius: 0.5rem;
+  bottom: 0;
   position: absolute;
   right: 0;
-  bottom: 0;
   width: 295px;
 }
 
@@ -275,49 +279,6 @@ img {
   border-radius: 0.5rem;
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
 }
-/* .skills__icon {
-  font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
-} */
-/* .skills__names {
-  display: flex;
-  align-items: center;
-} */
-/* .skills__bar {
-  bottom: 0;
-  background-color: var(--first-color);
-  border-radius: 0.5rem;
-  height: 0.25rem;
-  left: 0;
-  position: absolute;
-  z-index: var(--z-back);
-} */
-/* .skills__html {
-  width: 70%;
-}
-.skills__nodejs {
-  width: 60%;
-}
-.skills__reactjs {
-  width: 30%;
-}
-.skills__vuejs {
-  width: 65%;
-}
-.skills__mysql {
-  width: 65%;
-}
-.skills__postgresql {
-  width: 65%;
-}
-.skills__firebase {
-  width: 65%;
-} */
-
-.skills__img {
-  border-radius: 0.5rem;
-}
 
 /* ===== WORK =====*/
 .work__container {
@@ -329,23 +290,15 @@ img {
   overflow: hidden;
 }
 .work__img img {
-  cursor: pointer;
   transition: 1s;
+  cursor: pointer;
 }
-
-.text {
-  margin-top: 10px;
-  padding: 10px;
-  text-align: justify;
-}
-
 .work__img img:hover {
   transform: scale(1.1);
 }
 
 /* ===== CONTACT =====*/
-.contact__input,
-textarea {
+.contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
@@ -383,6 +336,9 @@ textarea {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
+}
+.footer__icon:hover{
+  color: var(--first-color);
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -436,9 +392,15 @@ textarea {
     margin-bottom: 0;
     margin-right: var(--mb-4);
   }
+  .home__text{
+    text-align: justify;
+  }
   .home__img {
+    border-radius: 4px;
+    top: 10%;
     width: 457px;
     bottom: 15%;
+    
   }
 
   .about__container,
@@ -449,6 +411,9 @@ textarea {
   }
   .about__img img {
     width: 300px;
+  }
+  .about__text{
+    text-align: justify;
   }
   .work__container {
     grid-template-columns: repeat(3, 1fr);
