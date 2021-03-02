@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
           .then((resp) => resp.json())
           .then((resp) => {
+            Swal.close();
             Swal.fire({
               icon: resp.status,
               title: "Exito!",
